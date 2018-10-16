@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loblaw Training</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="dist/css/vendors.css" rel="stylesheet" media="screen">
+    <link href="dist/css/styles.css" rel="stylesheet" media="screen">
+    <link href="dist/css/styles-med.css" rel="stylesheet" media="screen">
+    <link href="dist/css/styles-sm.css" rel="stylesheet" media="screen">
+    <link href="dist/css/styles-options.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--<link href="css/print.css" rel=o"stylesheet" media="print">-->
+</head>
+<body ng-app="courseApp" ng-controller="BaseController" ng-cloak ng-class="{ editting: editContent }">
+<nav class="navbar navbar-default" ng-controller="NavbarController">
+    <div ng-cloak ng-hide="{{ !editContent }}" class="container-fluid save-o-matic">
+        <input type="hidden" value="index.html" placeholder="index_new.html"/>
+        <a ng-show="fileToDownload" target="_self" ng-href="{{ fileToDownload }}" download="index.html" class="dragout" ng-click="cleanUp()">Download or Drag NEW File Here</a>
+        <button ng-click="downloadFile()">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+            Save A Copy
+        </button>
+    </div>
+    <div class="container">
+        <!-- Brand and toggle get grouped  for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="showMobileMenu = !showMobileMenu">
+                <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-2x" ng-class="{'fa-navicon': !showMobileMenu, 'fa-close': showMobileMenu}" aria-hidden="true"></i>
+                </button>
+            <!-- <img src="img/Loblaw_logo.png" border="0"/>  -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="{'showMobileMenu': showMobileMenu}" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-class="{ 'navbar-right-scrolled-out': scrollerTop > 200 }">
+                <li>
+                    <div class="outerContainer" offset="{{ scrollOffset }}" du-smooth-scroll="sec-1" ng-click="clearMenus()" >
+                        <div class="innerContainer">
+                            <div class="element">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span>home</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('subMenu1')" ng-class="{'active': navMenuClick == 'subMenu1'}" >
+                        <div class="innerContainer">
+                            <div class="element drop-down">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span>menu 1</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'subMenu1', 'glyphicon-triangle-bottom': navMenuClick != 'subMenu1'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'subMenu1'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-2" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">menu 2</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-3" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item1</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-4" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item2</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-7" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item3</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-12" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item4</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-16" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item5</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-18" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item6</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-24" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item7</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-25" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item8</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-28" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item9</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-14" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item10</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-29" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item11</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-37" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item12</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('subMenu2')" ng-class="{'active': navMenuClick == 'subMenu2'}">
+                        <div class="innerContainer">
+                            <div class="element drop-down">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span>menu 2</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'subMenu2', 'glyphicon-triangle-bottom': navMenuClick != 'subMenu2'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'subMenu2'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-31" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item1</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-34" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item2</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-33" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item3</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-35" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item4</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--li>
+                    <div class="outerContainer" ng-click="goToScroll('sec-2');navMenuClick = null;">
+                        <div class="innerContainer">
+                            <div class="element" style="text-decoration: none !important;  ">
+                                <span offset="{{ scrollOffset }}" du-smooth-scroll="sec-38" ng-click="clearMenus()">
+                                    <a ng-attr-contenteditable="{{ editContent }}" style=""><span style="text-decoration: none; color: #ef293d !important;">patient medication information</span></a>
+                                </span>
+                            </div>
+                            <div class="element" du-smooth-scroll="sec-21" ng-click="clearMenus()">
+                                <a ng-attr-contenteditable="{{ editContent }}" ><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li-->
+
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('subMenu3')" ng-class="{'active': navMenuClick == 'subMenu3'}">
+                        <div class="innerContainer">
+                            <div class="element drop-down">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span>menu 3</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'subMenu3', 'glyphicon-triangle-bottom': navMenuClick != 'subMenu3'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'subMenu3'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-38" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item1</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-39" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">sub item2</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+                <!--li>
+                    <div class="outerContainer" ng-click="clickSubMenu('patient-med-info')" ng-class="{'active': navMenuClick == 'patient-med-info'}">
+                        <div class="innerContainer">
+                            <div class="element" style="text-decoration: none !important;  ">
+                                <span offset="{{ scrollOffset }}" du-smooth-scroll="sec-38" ng-click="clearMenus()">
+                                    <a ng-attr-contenteditable="{{ editContent }}" class="main-title"><span>patient medication information</span></a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'patient-med-info', 'glyphicon-triangle-bottom': navMenuClick != 'patient-med-info'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'patient-med-info'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-39" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">HOW TO APPLY THE PATCH</a>
+                        </li>
+                    </ul>
+                </li-->
+
+
+
+
+
+
+
+
+
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('resources')" ng-class="{'active': navMenuClick == 'resources'}">
+                        <div class="innerContainer">
+                            <div class="element">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span>menu 4</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'resources', 'glyphicon-triangle-bottom': navMenuClick != 'resources'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'resources'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li>
+                            <a href="http://purdue.ca/wp-content/uploads/2015/12/Loblaw-PM-EN.pdf?x50798" target="_blank"
+                               ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">sub item1</a>
+                        </li>
+                        <li>
+                            <a href="downloads/Loblaw_Product_Monograph_Training Module_Glossary.pdf" target="_blank" ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">sub item2</a>
+                        </li>
+                        <li>
+                            <a href="downloads/Loblaw_Product_Monograph_Training_Module_References.pdf" target="_blank" ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">sub item3</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<section class="header head-para">
+    <h2 ng-attr-contenteditable="{{ editContent }}">Text image with expand button</h2>
+</section><img class="img-fluid" src="assets/img/2-text+image-expand copy.jpg" width="100%">
+<section class="container">
+    <p ng-attr-contenteditable="{{ editContent }}">Proin ornare nunc lectus, eget bibendum est rutrum et.<br></p>
+    <div role="tablist" id="accordion-1">
+        <div class="card first-card">
+            <div class="card-header bg-c" role="tab" style="background-color:#0f17dd;">
+                <h5 class="text-monospace text-center text-white mb-0" style="color:#ffffff;" ng-attr-contenteditable="{{ editContent }}"><a data-toggle="collapse" aria-expanded="true" aria-controls="accordion-1 .item-1" href="div#accordion-1 .item-1" class="accordian-button" style="color:#ffffff;">TITLE EXPAND</a></h5>
+            </div>
+            <div class="collapse show item-1" role="tabpanel" data-parent="#accordion-1">
+                <div class="card-body">
+                    <p class="card-text para" ng-attr-contenteditable="{{ editContent }}">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer>
+<p ng-attr-contenteditable="{{ editContent }}">
+THIS DOCUMENT IS FOR INTERNAL TRAINING PURPOSES ONLY. DO NOT DISSEMINATE.
+</p>
+</footer>
+</div>
+    </div>
+</section>
+
+
+
+
+<div class="row section-footer" offset="{{ scrollOffset }}" du-smooth-scroll="sec-1"><a><i class="fa fa-caret-up fa-2x"></i></a></div>
+
+<!-- Modal -->
+<div ng-if="editContent" class="modal fade" id="termEditorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit Mode...</h4>
+            </div>
+            <div class="modal-body">
+                <div id="editTerms">
+                    <input id="termTitle" type="text" class="form-control"/>
+                    <div id="termDescription" class="form-control" contenteditable="true"
+                         style="height:160px;overflow-y:auto"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="saveTerm()">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+<script src="dist/js/vendors.js"></script>
+<script src="dist/js/app.js"></script>
+<!--script src="dist/js/test.js"></script-->
+<!--[if IE 9]>
+<script>
+    $(document).ready(function () {
+       $('.hide-me').removeClass('hide-me');
+
+        $( "#submit-0" ).click(function() {
+            alert( "Handler for .click() called." );
+        });
+
+
+    });
+</script>
+
+
+
+<![endif]-->
+
+</body>
+</html>

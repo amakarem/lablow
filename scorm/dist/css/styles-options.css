@@ -1,0 +1,448 @@
+
+@media (max-width: 440px) {
+    .question-padding-6 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 444px) {
+    .question-padding-7 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 479px) {
+    .question-padding-8 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 508px) {
+    .question-padding-9 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 543px) {
+    .question-padding-13 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 571px) {
+    .question-padding-2 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+
+@media (max-width: 620px) {
+    .question-padding-1 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 624px) {
+    .question-padding-12 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+
+@media (max-width: 660px) {
+    .throat-space {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .throat-box-img {
+        width: 99%;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+}
+
+@media (max-width: 688px) {
+    .question-padding-0 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 729px) { .question-padding-3 {  vertical-align: middle;  padding-top: 3px;  } }
+@media (max-width: 435px) { .q1-1-box {  height: 80px !important; } .question-padding-3 {  vertical-align: middle;  padding-top: 1px;  } }
+@media (max-width: 343px) { .q1-1-box {  height: 104px !important; }  .question-padding-3 {  vertical-align: middle;  padding-top: 1px;  }  }
+
+@media (max-width: 485px) { .q1-2-box {  height: 80px !important; }   }
+@media (max-width: 374px) { .q1-2-box {  height: 100px !important; }    }
+@media (max-width: 334px) { .q1-2-box {  height: 124px !important; }  .question-padding-3 {  vertical-align: middle;  padding-top: 1px;  }  }
+
+@media (max-width: 437px) { .q1-3-box {  height: 80px !important;  }  }
+@media (max-width: 343px) { .q1-3-box {  height: 105px !important; }  }
+
+@media (max-width: 365px) { .q1-4-box {  height: 80px !important;  }  }
+@media (max-width: 579px) {
+    .vert-box {     margin-right: 0 !important;   }
+    .disposal-box { height: 200px !important;    }
+}
+
+@media (max-width: 991px ) {
+    .geriatrics-box {
+        height: 190px;
+    }
+}
+@media (max-width: 717px ) {
+    .geriatrics-box {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 769px) and (min-width: 767px) {
+
+    .black-box-back {
+        color: white;
+        padding: 1em 1em 1em 0;
+        width: 47%;
+        float: left;
+        margin-left: 4%;
+    }
+
+}
+
+
+@media (max-width: 731px) {
+    .question-padding-4 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 740px) {
+    .question-padding-11 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (min-width: 530px) {
+    .question-padding-26 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (max-width: 529px) {
+    .question-padding-26 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+
+
+@media (max-width: 586px) {
+    .question-padding-14 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 569px) {
+    .question-padding-15 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 597px) {
+    .question-padding-16 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (min-width:569px) and (max-width: 768px)   {
+    .question-padding-15 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (min-width:586px) and (max-width: 768px)   {
+    .question-padding-14 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (min-width:597px) and (max-width: 768px)   {
+    .question-padding-16 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (min-width: 741px) and (max-width: 768px)   {
+    .question-padding-11 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (min-width: 624px) and (max-width: 768px)   {
+    .question-padding-12 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (min-width:543px) and (max-width: 768px)   {
+    .question-padding-13 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+
+@media (max-width:1200px) and (min-width: 768px)   {
+    .applying-patch {
+        width: 77% !important;
+    }
+}
+
+
+@media (max-width: 991.5px) {
+    .question-padding-5 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+@media (min-width: 991.5px) {
+    .question-padding-10 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+
+
+@media (min-width: 1199px) {
+    .question-padding-17 {
+        vertical-align: middle;
+        padding-top: 11px;
+    }
+}
+@media (max-width: 1199.5px) {
+    .question-padding-17 {
+        vertical-align: middle;
+        padding-top: 3px;
+    }
+}
+
+@media (min-width: 648px) { .question-padding-20 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 648px) { .question-padding-20 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 648px) { .question-padding-21 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 647px) { .question-padding-21 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 652px) { .question-padding-22 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 651px) { .question-padding-22 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 657px) { .question-padding-23 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 656px) { .question-padding-23 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 658px) { .question-padding-25 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 657px) { .question-padding-25 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 769px) { .question-padding-24 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 768px) { .question-padding-24 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 991.5px) { .question-padding-18 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 991.5px) { .question-padding-18 { vertical-align: middle; padding-top: 3px; }  }
+
+@media (min-width: 685px) { .question-padding-19 { vertical-align: middle; padding-top: 11px; }  }
+@media (max-width: 685px) { .question-padding-19 { vertical-align: middle; padding-top: 3px; }  }
+
+
+@media (max-width: 991px) {
+    .structural-formula-img {
+        width: calc(346px - 55%);
+        height: calc(399px - 55%);
+    }
+}
+
+
+@media (max-width: 730px) {
+    .med-icon-padding {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 640px) {
+    .structural-formula-img {
+        width: calc(346px - 70%);
+        height: calc(399px - 70%);
+    }
+    .med-icon-text {
+        padding: 15px 30px !important;
+    }
+}
+
+@media (max-width: 593px) {
+    .structural-formula-img {
+        width: calc(346px - 80%);
+        height: calc(399px - 80%);
+    }
+}
+
+@media (max-width: 570px) {
+    .keep-away-from-kids-img {
+        width: calc(99px - 30%);
+        height: calc(99px - 30%);
+    }
+    .clean-water-padding {
+        padding-top: 15px;
+    }
+    .med-icon-text {
+        padding: 15px 45px !important;
+    }
+}
+
+
+@media (max-width: 1319px) {
+    .hepatic-img-2 {
+        width: calc(121px - 14%);
+        height: calc(91px - 14%);
+    }
+
+}
+
+@media (max-width: 736px) {
+    .small-margin {
+        padding-right: 0.5em;
+    }
+}
+
+
+@media (max-width: 721px) { .warfarin-boxes { height: 23em !important; }  }
+@media (min-width: 721px) { .warfarin-boxes { height: 15em !important; }  }
+
+@media (max-width: 649px) { .dosage-boxes { height: 22em !important; }  }
+@media (max-width: 991px) and (min-width: 650px) { .dosage-boxes { height: 18em !important; }  }
+@media (min-width: 991px) { .dosage-boxes { height: 15em !important; }  }
+
+
+@media (max-width: 702px) {  .question-box-height-med { height: 80px !important;   }  }
+@media (max-width: 533px) {  .question-box-height-med { height: 105px !important;  }  }
+@media (max-width: 447px) {  .question-box-height-med { height: 122px !important;  } }
+@media (max-width: 393px) {  .question-box-height-med { height: 147px !important;  } .q-box-top {padding-top: 2px !important} }
+@media (max-width: 339px) {  .question-box-height-med { height: 177px !important;  } .q-box-top {padding-top: 4px !important} }
+@media (max-width: 330px) {  .question-box-height-med { height: 197px !important;  } .q-box-top {padding-top: 7px !important} }
+
+
+@media (max-width: 991px) and (min-width: 545px) {
+    .resp-depression-img-right {
+        width: 70%;
+        float: right;
+        padding-left: 35px !important;
+    }
+    .resp-depression-img-left {
+        padding-right: 26px !important;
+    }
+
+    .resp-depression-img-left img {
+        width: calc(86px - 23%) !important;
+        height: calc(76px - 30%) !important;
+    }
+    .neonatal-top {
+        padding-top: 25px !important;
+    }
+}
+@media (max-width: 544px) and (min-width: 481px) {
+    .resp-depression-img-left {
+        width: 99%;
+        text-align: center;
+        padding-top: 0;
+        margin-top: 0 !important;
+    }
+    .resp-depression-img-left img {
+        width: calc(86px - 17%);
+        height: calc(76px - 20%);
+    }
+    .resp-depression-img-right {
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+        text-align: center;
+    }
+    .neonatal-top {
+        padding-top: 0;
+    }
+
+}
+@media (max-width: 1199px){
+    .individualized-img {
+        width: calc(140px + 10%) !important;
+        height: calc(90.5px + 10%) !important;
+    }
+
+    .individualized-img-2 {
+        width: calc(140px + 22%) !important;
+        height: calc(90.5px + 22%) !important;
+    }
+}
+
+@media (max-width: 680px){
+    .individualized-text {
+        padding-left: 100px !important;
+    }
+    .indiv-text-right {
+        padding-right: 60px !important;
+    }
+
+    .individualized-img-2 {
+        width: calc(140px + 10%) !important;
+        height: calc(90.5px + 10%) !important;
+    }
+    .metabolism-img {
+        width: calc(300px - 40%);
+        height: calc(350px - 40% );
+    }
+    .metabolism-img-down {
+        margin-top: 70px;
+    }
+    .hairless-img-2 {
+        width: calc(118px - 16%);
+        height: calc(123px - 16%);
+    }
+    .use-only-water-img-2 {
+        width: calc(135px - 23%);
+        height: calc(141px - 23%);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .knee-black-box-left {
+        width: 35%;
+    }
+    .knee-black-box-right {
+        width: 65%;
+    }
+    .individualized-text {
+        padding-left: 60px !important;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .knee-black-box-left {
+        width: 45%;
+    }
+    .knee-black-box-right {
+        width: 55%;
+        font-size: 16px;
+    }
+    .absorption-img {
+        width: calc(831px - 20%);
+        height: calc(298px - 20%g);
+    }
+
+
+
+}
+
+
+@media (max-width: 991px) and (min-width: 481px) {
+    .no-alc-box-text {
+        padding: 10px 15px !important;
+    }
+}

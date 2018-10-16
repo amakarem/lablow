@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BuTrans Prototype</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="dist/css/vendors.css" rel="stylesheet" media="screen">
+    <link href="dist/css/styles.css" rel="stylesheet" media="screen">
+
+
+    <!--<link href="css/print.css" rel="stylesheet" media="print">-->
+</head>
+<body ng-app="courseApp" ng-controller="BaseController" ng-cloak ng-class="{ editting: editContent }">
+<nav class="navbar navbar-default" ng-controller="NavbarController">
+    <div ng-cloak ng-hide="{{ !editContent }}" class="container-fluid save-o-matic">
+        <input type="hidden" value="index.html" placeholder="index_new.html"/>
+        table table-striped table-hover table-update ng-isolate-scope animated fadeIn <a ng-show="fileToDownload" target="_self" ng-href="{{ fileToDownload }}" download="index.html" class="dragout" ng-click="cleanUp()">Download or Drag NEW File Here</a>
+        <button ng-click="downloadFile()">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+            Save A Copy
+        </button>
+    </div>
+    <div class="container">
+        <!-- Brand and toggle get grouped  for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="showMobileMenu = !showMobileMenu">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-2x" ng-class="{'fa-navicon': !showMobileMenu, 'fa-close': showMobileMenu}" aria-hidden="true"></i>
+            </button>
+            <img src="img/butrans_logo.png" border="0"/>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="{'showMobileMenu': showMobileMenu}" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-class="{ 'navbar-right-scrolled-out': scrollerTop > 200 }">
+                <li>
+                    <div class="outerContainer" offset="{{ scrollOffset }}" du-smooth-scroll="sec-1" ng-click="clearMenus()" >
+                        <div class="innerContainer">
+                            <div class="element">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span style="color: #ef293d !important;">home</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('subMenu1')" ng-class="{'active': navMenuClick == 'subMenu1'}" >
+                        <div class="innerContainer">
+                            <div class="element drop-down">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span style="color: #ef293d !important;">health professional information</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'subMenu1', 'glyphicon-triangle-bottom': navMenuClick != 'subMenu1'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'subMenu1'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-2" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">SUMMARY PRODUCT INFORMATION</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-3" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">INDICATIONS AND CLINICAL USE</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-4" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">CONTRAINDICATIONS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-7" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">WARNINGS AND PRECAUTIONS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-8" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">ADVERSE REACTIONS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-9" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">DRUG INTERACTIONS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-10" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">DOSAGE AND ADMINISTRATION</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-11" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">OVERDOSAGE</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-12" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">ACTION AND CLINICAL PHARMACOLOGY</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-13" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">STORAGE AND STABILITY</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-14" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">SPECIAL HANDLING INSTRUCTIONS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-15" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">DOSAGE FORMS, COMPOSITION AND PACKAGING</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-16" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">AVAILABILITY OF DOSAGE FORMS</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('subMenu2')" ng-class="{'active': navMenuClick == 'subMenu2'}">
+                        <div class="innerContainer">
+                            <div class="element drop-down">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span style="color: #ef293d !important;">scientific information</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'subMenu2', 'glyphicon-triangle-bottom': navMenuClick != 'subMenu2'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'subMenu2'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-17" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">PHARMACEUTICAL INFORMATION</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-18" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">CLINICAL TRIALS</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-19" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">DETAILED PHARMACOLOGY</a>
+                        </li>
+                        <li offset="{{ scrollOffset }}" du-smooth-scroll="sec-20" ng-click="clearMenus()">
+                            <a ng-attr-contenteditable="{{ editContent }}">TOXICOLOGY</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="goToScroll('sec-2');navMenuClick = null;">
+                        <div class="innerContainer">
+                            <div class="element" style="text-decoration: none !important;  ">
+                                <span offset="{{ scrollOffset }}" du-smooth-scroll="sec-21" ng-click="clearMenus()">
+                                    <a ng-attr-contenteditable="{{ editContent }}" style=""><span style="text-decoration: none; color: #ef293d !important;">patient medication information</span></a>
+                                </span>
+                            </div>
+
+
+                            <div class="element" du-smooth-scroll="sec-21" ng-click="clearMenus()">
+                                <a ng-attr-contenteditable="{{ editContent }}" >
+                                    <span style="color: #ef293d !important;">
+                                        </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="outerContainer" ng-click="clickSubMenu('resources')" ng-class="{'active': navMenuClick == 'resources'}">
+                        <div class="innerContainer">
+                            <div class="element">
+                                <a ng-attr-contenteditable="{{ editContent }}"><span style="color: #ef293d !important;">resources</span></a>
+                            </div>
+                        </div>
+                        <div class="chevron-area">
+                            <span class="glyphicon" ng-class="{'glyphicon-triangle-top': navMenuClick == 'resources', 'glyphicon-triangle-bottom': navMenuClick != 'resources'}" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <ul ng-show="navMenuClick == 'resources'" class="nav-bar-sub-menu" ng-mouseleave="conditionalClearMenus()">
+                        <li>
+                            <a href="downloads/product_monograph.pdf" target="_blank" ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">FULL PRODUCT MONOGRAPH</a>
+                        </li>
+                        <li>
+                            <a href="downloads/BuTrans_Product_Monograph_Training Module_Glossary.pdf" target="_blank" ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">GLOSSARY</a>
+                        </li>
+                        <li>
+                            <a href="downloads/BuTrans_Product_Monograph_Training_Module_References.pdf" target="_blank" ng-attr-contenteditable="{{ editContent }}" ng-click="clickResources()">REFERENCES</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+<section id="sec-21">
+    <div class="container-fluid">
+        <div class="row section-main type-2">
+            <div class="container">
+
+                <div class="title-area hide-me title-space"
+                     when-visible="animateFadeIn">
+                    <h4 ng-attr-contenteditable="{{ editContent }}"><div class="color-me-gray">INTERNAL USE ONLY </div></h4>
+
+                    <h1 ng-attr-contenteditable="{{ editContent }}">Patient Medication Information</h1>
+
+                    <div class="title-area-cluster">
+                        <img src="img/title_area_cluster.png"/>
+                    </div>
+                </div>
+
+                <div class="center-me font-regular">
+                    Disclaimer: The language used hereinafter in the <br>
+                    Patient Medication Information section is intended for patients.
+                </div>
+
+                <div class="special-solid-border font-size-def">
+                    <p class="center-me small-font-0 colour-me-red-reg">Serious Warnings and Precautions </p>
+
+                    <div class="sub-section">
+                        <div class="left-side-0">
+                            <img class="pat-med-warning-img" src="img/warning_sign.png">
+                        </div>
+                        <div class="right-side-0 font-emphasis" >
+                            <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                <li class="hotpink"><span style="color: #333;">Even if you take BuTrans as prescribed
+                                    you are at risk for opioid addiction, abuse, and misuse that can lead to overdose
+                                    and death. To understand your risk of opioid addiction, abuse, and misuse you
+                                    should speak to your prescriber (e.g., doctor).
+                                </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <div class="left-side-0">
+                            <img class="pat-med-lungs-img" src="img/lungs.png">
+                        </div>
+                        <div class="right-side-0 font-emphasis" >
+                            <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                <li class="hotpink"><span style="color: #333;">Life-threatening breathing problems can
+                                    happen while taking BuTrans, especially if not taken as directed.
+                                </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <div class="left-side-0">
+                            <img class="pat-med-no-share-img" src="img/no_share.png">
+                        </div>
+                        <div class="right-side-0 font-emphasis" >
+                            <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                <li class="hotpink"><span style="color: #333;">Never give anyone your BuTrans. They
+                                    could die from taking it. Touching the medicated side of a patch can cause a
+                                    fatal overdose to people who have not been prescribed this medication, especially
+                                    children. Avoid accidental contact between the patch and other people, especially
+                                    when holding or caring for children.
+                                </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-section">
+                        <div class="left-side-0">
+                            <img class="pat-med-withdrawal-img" src="img/withdrawal_symptoms.png">
+                        </div>
+                        <div class="right-side-0 font-emphasis" >
+                            <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                <li class="hotpink"><span style="color: #333;">Babies born to mothers who have taken B
+                                    uTrans (for short or long periods, in small or large doses) during their
+                                    pregnancy can suffer life-threatening withdrawal symptoms. This can occur in
+                                    the days after birth and for up to 4 weeks after delivery. If your baby has
+                                    breathing changes (weak, difficult or fast), is unusually difficult to comfort,
+                                    has tremors (shakiness), or has increased stools, sneezing, yawning, vomiting,
+                                    or fever, seek immediate medical help for your baby.
+                                </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="">
+    <div class="container-fluid title-space">
+        <div class="row section-main type-2"  style="min-height: 1px; ">
+            <div class="container">
+                <div class="content-area type-2 col-sm-12 hide-me font-emphasis"
+                     when-visible="animateFadeInRight" ng-attr-contenteditable="{{ editContent }}">
+                    <p class="color-me-red small-font-0">What is BuTrans used for?</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row section-main">
+            <div class="col-sm-12" style="background-color: black; ">
+                <div class="col-lg-6 col-sm-offset-1" style="color: white;  padding: 2em;    width: 50%; float: left; ">
+                    <div style="line-height: 1.5; ">
+                        <span class="font-emphasis bold-this">BuTrans<sup>®</sup></span>
+                        <span class="font-regular"> is used for the long-term management of pain, when:
+
+                    </div>
+                    <br>
+                    <div style="line-height: 1.5; width: 100%; ">
+                        <ul class="col-sm-12 font-regular" style="padding-left: 25px; color: white; ">
+                            <li style="color: hotpink; padding-bottom: 10px;"><span style="color: white;">The pain is
+                                severe enough to require daily, around-the-clock pain medication</span></li>
+                            <li style="color: hotpink"><span style="color: white;">The doctor determines that other
+                                treatment options are not able to effectively manage your pain</span></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="padding-top: 4em; font-size: 16px;"><span class="bold-this" >BuTrans<sup>®</sup></span>
+                        is NOT used (“as needed”) to treat pain that you only have once in a while.
+                    </div>
+                </div>
+                <div class="col-lg-4" style="width: 41%; float: right; height: 21em;  ">
+                    <img src="img/back_pain_black.png" style="  align: right; height: 100%;  " />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container-fluid ">
+        <div class="row section-main type-2"  style="min-height: 1px; ">
+            <div class="container">
+                <div class="content-area type-2 col-sm-12 hide-me font-emphasis"
+                     when-visible="animateFadeInRight" ng-attr-contenteditable="{{ editContent }}">
+                    <p class="color-me-red small-font-0" style="padding-top: 0; ">How does BuTrans work?
+                    </p>
+                    <div class="font-emphasis title-space">
+                        BuTrans contains buprenorphine which is a pain medication belonging to the class of medicines
+                        known as opioids. It relieves pain by acting on specific nerve cells of the spinal cord and brain.
+                    </div>
+
+                    <p class="color-me-red small-font-0">What are the ingredients in BuTrans?  </p>
+
+                    <div class="table-container title-space">
+                        <table class="table table-striped table-hover table-update hide-me"
+                               when-visible="animateFadeIn"  style="margin-bottom: 0; !important;">
+                            <thead>
+                            <tr>
+                                <th colspan="1" class="table-col-1"></th>
+                                <th colspan="3" class="vert-bordered table-col-2 font-regular" ng-attr-contenteditable="{{ editContent }}">
+                                    Ingredient
+                                </th>
+                                <th class="centering-cols"></th>
+                            </tr>
+                            </thead>
+                            <tbody >
+                            <tr class="x-small-font-2">
+
+                                <td ng-attr-contenteditable="{{ editContent }}">Medicinal ingredient</td>
+                                <td colspan="3"  class="vert-bordered" ng-attr-contenteditable="{{ editContent }}">buprenorphine</td>
+                                <td class="centering-cols"></td>
+                            </tr>
+                            <tr class="x-small-font-2">
+
+                                <td ng-attr-contenteditable="{{ editContent }}">Non-medicinal ingredients</td>
+                                <td  colspan="3" class="vert-bordered" ng-attr-contenteditable="{{ editContent }}">
+                                    Protective liner: polyethylene terephthalate <br>
+                                    Backing layer: polyethylene terephthalate <br>
+                                    Drug in adhesive layer: aluminum acetylacetonate, levulinic acid, <br>
+                                    oleyl oleate, polyacrylate (dry solids) and povidone
+                                </td>
+                                <td class="centering-cols">
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="color-me-red small-font-0">BuTrans comes in the following dosage forms: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container-fluid ">
+        <div class="row section-main type-2"  style="min-height: 1px; ">
+            <div class="container">
+                <div class="content-area type-2 col-sm-12 hide-me font-emphasis"
+                     when-visible="animateFadeInRight" ng-attr-contenteditable="{{ editContent }}">
+
+                    <div class="table-container title-space">
+                        <table class="table table-striped table-hover table-update hide-me"
+                               when-visible="animateFadeIn"  style="margin-bottom: 0; important;">
+                            <thead>
+                            <tr>
+                                <th colspan="1" class="table-col-1">Dosage Form</th>
+                                <th colspan="3" class="vert-bordered table-col-2 font-regular" ng-attr-contenteditable="{{ editContent }}">
+                                    Strength
+                                </th>
+                                <th class="centering-cols"></th>
+                            </tr>
+                            </thead>
+                            <tbody >
+                            <tr class="x-small-font-2">
+
+                                <td ng-attr-contenteditable="{{ editContent }}">Transdermal patch</td>
+                                <td colspan="3"  class="vert-bordered" ng-attr-contenteditable="{{ editContent }}">
+                                    5, 10, 15 and 20 mg buprenorphine per patch, delivering 5, 10, 15 and 20 mcg/h
+                                    buprenorphine respectively for 7 days
+                                </td>
+                                <td class="centering-cols"></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid ">
+        <div class="row section-main type-2"  style="min-height: 1px; ">
+            <div class="container">
+                <div class="content-area type-2 col-sm-12 hide-me font-emphasis"
+                     when-visible="animateFadeInRight" ng-attr-contenteditable="{{ editContent }}">
+
+                    <p class="color-me-red small-font-0">Do not use BuTrans if: </p>
+
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="immune-img-2" src="img/immune_cell.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You are allergic to buprenorphine, other
+                                        opioids, or any of the other ingredient in the formulation or component of the
+                                        container of BuTrans
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/pain_control.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">Your pain can be controlled by the
+                                        occasional use of pain medication including those available without a prescription
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/lungs.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You have severe asthma, trouble
+                                        breathing, or any heart problems
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/abdomen.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You have bowel blockage or narrowing
+                                        of the stomach or intestines (e.g., paralytic ileus)
+                                    </span></li>
+                                    <li class="hotpink"><span style="color: #333;">You have severe pain in your abdomen
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/head_injury.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You have a head injury or other risks for seizures
+
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/brain.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You suffer from alcoholism
+                                    </span></li>
+                                    <li class="hotpink"><span style="color: #333;">You are being treated for narcotic withdrawal
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/pregnant.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You are pregnant or plan to become
+                                        pregnant, breast-feeding, or in labour
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/m-gravis.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You have myasthenia gravis
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<section>
+    <div class="container-fluid ">
+        <div class="row section-main type-2"  style="min-height: 1px; ">
+            <div class="container">
+                <div class="content-area type-2 col-sm-12 hide-me font-emphasis"
+                     when-visible="animateFadeInRight" ng-attr-contenteditable="{{ editContent }}">
+
+
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/hepatic.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You have severe liver disease
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="pain-control-img" src="img/kid.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis" style=" padding: 25px 15px !important;">
+                                <ul style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333;">You are under 18 years of age
+                                    </span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="talk-img" src="img/talk.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis color-me-gray" style=" padding: 25px 15px !important;">
+                                <p class="small-space-below">To help avoid side effects and ensure proper use, talk to your healthcare professional
+                                    before you take BuTrans. Talk about any health conditions or problems you may have,
+                                    including if you: </p>
+
+                                <ul class="font-regular " style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Have a history of illicit or
+                                        prescription drug or alcohol abuse </span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Have severe kidney disease</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Have low blood pressure</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Have past or current depression </span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2"> Have problems with your thyroid,
+                                         adrenal or prostate gland</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Suffer from chronic or severe constipation
+                                 </span></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="sub-section">
+                            <div class="left-side-0">
+                                <img class="heat-img-2" src="img/no_heat_2.png">
+                            </div>
+                            <div class="right-side-0 font-emphasis color-me-gray" style=" padding: 25px 15px !important;">
+                                <p class="small-space-below ">Do not expose the patch area to sources of heat such as:</p>
+
+                                <ul class="font-reg " style="list-style-position: outside;  padding-left: 1em !important;" >
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Eating pads </span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Electric blankets</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Heated</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Waterbeds</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2"> Heat lamps</span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Saunas and hot tubs </span></li>
+                                    <li class="hotpink"><span style="color: #333; line-height: 2">Intensive sunbathing, etc.  </span></li>
+                                </ul>
+                                This may increase the drug's ability to go through the skin and result in an overdose.
+                                This may also occur if you develop a fever.
+                            </div>
+                        </div>
+                        <div class="red-separator font-regular "></div>
+                        <p class="small-space-above small-space-below">There are important differences between physical dependence and addiction, and each is a
+                            reason for close medical supervision and honest discussions with your doctor. If you
+                            have questions or concerns about abuse, addiction or physical dependence, please
+                            tell your doctor.
+                        </p>
+                        <div class="red-separator"></div>
+
+
+                        <div class="sub-section">
+                            <div class="left-side-6">
+                                <img class="car-img" src="img/car.png" style="padding-right: 15px; ">
+                                <img class="car-img" src="img/tractor.png">
+                            </div>
+                            <div class="right-side-6 font-emphasis">
+                                Before you perform tasks which may require special attention, wait until you know how
+                                you respond to BuTrans. Drowsiness, dizziness, or lightheadedness, can especially occur
+                                after the first dose and when the dose is increased.
+
+                            </div>
+                        </div>
+
+
+                        <div class="sub-section">
+                            <div class="small-font-0 color-me-red separate-this small-space-below">The following may interact with BuTrans: </div>
+                            <ul class="font-reg " style="list-style-position: outside;  padding-left: 1em !important;" >
+                                <li class="hotpink"><span style="color: #333; ">Alcohol, including
+                                    prescription and non-prescription medications containing alcohol.
+                                    <a id="term_1"  ng-click="openTermEditor('term_1', true)" class="circle-popover" tabindex="0"
+                                       popover-trigger="{{ popoverTrigger }}" popover-title="Did you know" data-style="icon-pop"
+                                       uib-popover="Do not drink alcohol while taking BuTrans, as this can lead to drowsiness,
+                                       depressed breathing, serious side effects or a fatal overdose"><img
+                                            class="popup-circle-img" src="img/chat_bubble.png" style="margin-bottom: 25px; "/></a>
+
+                                </span></li>
+                                <li class="hotpink"><span style="color: #333; ">Other sedative drugs which
+                                    may enhance the drowsiness caused by BuTrans </span></li>
+                                <li class="hotpink"><span style="color: #333;">Other opioid analgesics (for pain)</span></li>
+                                <li class="hotpink"><span style="color: #333;">General anesthetics (used during surgery)</span></li>
+                                <li class="hotpink"><span style="color: #333;">Drugs used to help you sleep or to reduce anxiety</span></li>
+                                <li class="hotpink"><span style="color: #333; ">Antidepressants (for
+                                    depression and mood disorders). Do not take BuTrans with monoamine oxidase (MAO)
+                                    inhibitors or if you have taken MAO inhibitors in the last 14 days before treatment
+                                    with BuTrans</span></li>
+                                <li class="hotpink"><span style="color: #333;">Drugs used to treat serious
+                                    mental or emotional disorders, such as schizophrenia</span></li>
+                                <li class="hotpink"><span style="color: #333; ">Antihistamines (for allergies)</span></li>
+                                <li class="hotpink"><span style="color: #333; ">Anti-emetics (for prevention of vomiting)</span></li>
+                                <li class="hotpink"><span style="color: #333;">Drugs used to treat muscle spasms and back pain</span></li>
+                                <li class="hotpink"><span style="color: #333; ">Warfarin and other coumarin
+                                    anticoagulants (for prevention/treatment of blood clots)</span></li>
+                                <li class="hotpink"><span style="color: #333; ">Anti-retroviral, anti-fungal and antibiotic drugs</span></li>
+                                <li class="hotpink"><span style="color: #333;">Grapefruit juice </span></li>
+                            </ul>
+
+                            <div class="special-pop-border">
+                                Tell your healthcare professional about all the medicines you take, including any drugs,
+                                vitamins, minerals, natural supplements or alternative medicines.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <p>
+        THIS DOCUMENT IS FOR INTERNAL TRAINING PURPOSES ONLY. DO NOT DISSEMINATE.
+    </p>
+</footer>
+</div>
+</div>
+</section>
+
+
+
+
+<div class="row section-footer" offset="{{ scrollOffset }}" du-smooth-scroll="sec-1"><a><i class="fa fa-caret-up fa-2x"></i></a></div>
+
+<!-- Modal -->
+<div ng-if="editContent" class="modal fade" id="termEditorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit Mode...</h4>
+            </div>
+            <div class="modal-body">
+                <div id="editTerms">
+                    <input id="termTitle" type="text" class="form-control"/>
+                    <textarea id="termDescription" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="saveTerm()">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="dist/js/vendors.js"></script>
+<script src="dist/js/app.js"></script>
+<script src="dist/js/test.js"></script>
+<!--[if IE 9]>
+<script>
+    $(document).ready(function () {
+        $('.hide-me').removeClass('hide-me');
+    });
+</script>
+<![endif]-->
+
+</body>
+</html>

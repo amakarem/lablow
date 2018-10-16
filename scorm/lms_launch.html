@@ -1,0 +1,36 @@
+<HTML>
+	<HEAD>
+		<TITLE>BuTrans Product Monograph (PM) Training Module</TITLE>
+		
+		<!-- borrowed SCORM.com -->
+		<script src="dist/lms/APIConstants.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/Configuration.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/UtilityFunctions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/SCORM2004Functions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/SCORMFunctions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/AICCFunctions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/NONEFunctions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/LMSAPI.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/lms/API.js" type="text/javascript" charset="utf-8"></script>
+
+		<script language="JavaScript1.2">
+		
+		strContentLocation = "index.html";  //Put the link to the start of the content here.
+		
+		function LoadContent(){
+			window.scormdriver_content.document.location.href = strContentLocation;
+		}
+		</script>
+		<!-- end borrow -->
+
+	</HEAD>
+	<frameset rows="100%,0%,0%,0%" onload="Start()" border="0" onbeforeunload="Unload()" onunload="Unload()">
+		<frame name="scormdriver_content" src="dist/lms/blank.html" scrolling="true">
+		<frame name="AICCComm" src="dist/lms/AICCComm.html">
+		<frame name="rusticisoftware_aicc_results" src="dist/lms/blank.html">
+		<frame name="NothingFrame" src="dist/lms/blank.html">
+	</frameset>
+	<noframes>
+		Your browser must be able to view frames for this content to display.
+	</noframes>
+</HTML>

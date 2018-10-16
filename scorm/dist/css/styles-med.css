@@ -1,0 +1,453 @@
+/*High end Windows phone*/
+@media (max-width: 768px) {
+    .full-question-box {
+        width: -webkit-calc(100% + 1px) !important;
+        width: calc(100% + 1px) !important;
+    }
+
+    .question-padding-med {
+        vertical-align: middle;
+        padding-top: 1px;
+    }
+
+    .question-padding-lrg {
+        vertical-align: middle;
+        padding-top: 0.5px;
+    }
+
+    .elderly-img {
+        width: calc(96px - 45%);
+        height: calc(91px - 45%);
+    }
+    .no-kids {
+        width: calc(81px - 35%);
+        height: calc(81px - 35%);
+    }
+    .gender-img {
+        width: calc(126px - 22%);
+        height: calc(93px - 22%);
+    }
+    .renal-img {
+        width: calc(102px - 45%);
+        height: calc(109px - 45%);
+    }
+    .renal-img-top {
+        padding-top: 15px;
+    }
+    .gender-top-space {
+        margin-top: 1.65em;
+    }
+    .hepatic-img-1 {
+        width: calc(121px - 20%);
+        height: calc(91px - 20%);
+    }
+
+    .med-dotted-box {
+        padding: 20px !important;
+    }
+    .med-dotted-box-1 {
+        padding: 10px !important;
+    }
+    .single-space {
+        padding-bottom: 1em;
+    }
+
+    .mao-img {
+        width: calc(71px - 45%);
+        height: calc(74px - 45%);
+    }
+
+    .mao-left {
+        padding-left: 0 !important;
+    }
+
+    .single-space-above {
+        margin-top: 15px !important;
+    }
+
+    .yellow-image-top-space {
+        padding-top: 20px;
+    }
+
+    .yellow-image-top-space-2 {
+        padding-top: 52px !important;
+    }
+
+    .yellow-image-top-space-3 {
+        padding-top: 75px !important;
+    }
+    .yellow-right-spacing {
+        padding-left: 35px !important;
+    }
+
+    .immune-cell {
+        width: calc(4.5em - 18%);
+        height: calc(4.5em - 18%);
+    }
+    .lungs-img-3 {
+        width: calc(86px - 30%);
+        height: calc(76px - 30%);
+    }
+
+    .lungs-img-2 {
+        width: calc(4.5em - 11%);
+        height: calc(4.5em - 11%);
+        padding-top: 13px;
+    }
+    .use-only-water-img-4 {
+        width: calc(135px - 38%);
+        height: calc(141px - 38%);
+    }
+    .metabolism-img {
+        width: calc(300px - 35%);
+        height: calc(350px - 35%);
+    }
+
+    .img-left-spacing {
+        padding-left: 25px !important;
+    }
+
+    .img-top-spacing {
+        padding-top: 40px !important;
+    }
+
+    .connection-icon {
+        width: calc(2em - 20%);
+        height: calc(2em - 20%) !important;
+    }
+
+    .connection-icon-orig {
+        width: calc(45px - 3%) !important;
+        height: calc(45px - 3%) !important;
+    }
+
+    .more-info-icon {
+        width: calc(43px - 25%) !important;
+        height: calc(43px - 25%) !important;
+    }
+
+    .popup-circle-img {
+        width: calc(48px - 9%) !important;
+        height: calc(48px - 9%) !important;
+    }
+
+    .monitor-img {
+        width: calc(165px - 70%);
+        height: calc(149px - 70%);
+    }
+
+    .temp-img {
+        width: calc(78px - 18%);
+        height: calc(91px - 18%);
+    }
+
+    .heat-img {
+        width: calc(91px - 18%);
+        height: calc(91px - 18%);
+    }
+
+    .no-pregnant-img {
+        width: calc(95px - 3%);
+        height: calc(95px - 3%);
+    }
+
+    .pregnant-box {
+        height: 315px;
+    }
+
+
+    .geriatrics-img  {
+        padding-left: 9px !important;
+        padding-right: 0 ;!important;
+    }
+
+    .once-week-dosing {
+        width: 80%;
+    }
+    .applying-patch {
+        width: 70% !important;
+    }
+    .geriatrics {
+        float: left;
+        width: 80%;
+        padding-top: 1px;
+        padding-left: 11%;
+    }
+
+    .dose-titration-img {
+        width: calc(809px - 25%);
+        height: calc(144px - 25%);
+    }
+
+    .geriatrics-title {
+        padding-left: 7%;
+    }
+
+    .geriatrics-img-top {
+        padding-top: 10px;
+    }
+
+    .back-img-text-top {
+        padding-top: 0em !important;;
+    }
+
+    .back-img {
+        width: 49%;
+        height: 24.1em;
+    }
+    .patch-img-top {
+        margin-top: 1em;
+    }
+
+    .med-icon {
+        width: 6.75em;
+        height: 6.75em;
+    }
+
+    .med-icon-2 {
+        width: 6em;
+        height: 6em;
+    }
+
+
+    .patch-chest-img {
+        width: calc(838px - 48%);
+        height: calc(203px - 48%);
+    }
+    patch-chest-img-1 {
+        width: calc(838px - 60%);
+        height: calc(203px - 60%);
+    }
+
+    .butrans-img-position {
+        padding-top: 45px !important;
+    }
+    .individualized-text {
+        padding-left: 15px !important;
+    }
+    .butrans-top-padding {
+        padding-top: 15px !important;
+    }
+
+    .hairless-img {
+        width: 7em;
+        margin-top: 0;
+    }
+
+    .wait-3-weeks-img {
+        width: calc(234px -  15%);
+        height: calc(159px - 15%);
+    }
+    .wait-3-weeks-img-2 {
+        width: 105px;
+        //height:  81px;
+        //width: calc(234px - 97%);
+        //height: calc(159px - 97%);
+    }
+    .wait-3-weeks-text {
+        padding-left: 15px;
+    }
+
+    .use-only-water-img-3 {
+        width: calc(135px - 55%);
+        height: calc(141px - 55%);
+    }
+    .alignment-space-med {
+        padding-left: 4%;
+    }
+
+    .special-pop-border-half-right {
+        border: 1px dashed red;
+        border-radius: 8px;
+        padding: 1em 1em 1em 1em;
+        margin: 15px 0;
+        width: 48%;
+        float: right;
+    }
+
+    .hepatic-insuf-height {
+        height: 375px !important;
+    }
+
+    .storage-and-stability-box{
+        width: 75%;
+        overflow: hidden;
+    }
+    .patch-component-img-1 {
+        width: calc(866px - 50%);
+        height: calc(403px - 50%);
+    }
+    .patch-component-img {
+        width: calc(866px - 12%);
+        height: calc(403px - 12%);
+    }
+
+    .pain-now-chart-img {
+        width: calc(622px - 18%);
+        height: calc(300px - 18%);
+    }
+
+    .small-space-below-med {
+        margin-bottom: 1em;
+    }
+
+    .alignment-space-med {
+        padding-left: 4%;
+    }
+    .structural-formula-img {
+        width: calc(346px - 55%);
+        height: calc(399px - 55%);
+    }
+
+    .clinical-trials-li {
+        width: 90%;
+    }
+
+    .one-patch-img {
+        width: calc(71px + 25%);
+        height: calc(62px + 25%);
+    }
+
+    .top-img-space {
+        padding-top: 10px;
+    }
+    .back-patch {
+        width: calc(132px - 35%);
+        height: calc(111px - 35%);
+    }
+
+    .special-pop-border-half-1 {
+        border: 1px dashed red;
+        border-radius: 8px;
+        padding: .5em .5em .5em .5em;
+        margin: 10px 0;
+        width: 48%;
+        float: left;
+    }
+    .special-pop-border-half-right-1 {
+        border: 1px dashed red;
+        border-radius: 8px;
+        padding: .5em .5em .5em .5em;
+        margin: 10px 10px;
+        width: 48%;
+        float: left;
+    }
+    .mean-chart-img {
+        width: calc(831px - 45%);
+        height: calc(298px - 45%);
+    }
+    .special-population-height {
+        height: 260px;
+    }
+    .elderly-img-left {
+        padding-left: 0px;
+    }
+
+    .no-left-padding-med {
+        padding-left: 0 !important;
+    }
+    .xs-left-padding-med {
+        padding-left: 5px !important;
+    }
+    .serious-warnings-text-med {
+        padding-left: 25px !important;
+    }
+
+    .hairless-img-2 {
+        width: calc(118px - 9%);
+        height: calc(123px - 9%);
+    }
+
+    .use-only-water-img-2 {
+        width: calc(135px - 15%);
+        height: calc(141px - 15%);
+    }
+
+    .hair-top {
+        padding-top: 40px !important;
+    }
+
+    .apply-direction-img {
+        width: 95%;
+    }
+
+    .application-areas-img {
+        width: 125px;
+        padding-top: 10px;
+    }
+
+    .pat-med-no-share-img-2 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .temp-img-2 {
+        width: calc(74px - 10%);
+        height: calc(106px - 10%);
+    }
+    .keep-away-from-kids-img {
+        width: calc(99px - 10%);
+        height: calc(99px - 10%);
+    }
+    .keep-away-from-kids-img-top {
+        padding-top: 20px !important;
+    }
+    .pharmacy-img {
+        width:  80px;
+        height: 90px;
+    }
+    .pharmacy-img-top {
+        padding-top: 30px !important;
+    }
+    .warning-title {
+        width: 78%;
+    }
+
+    .title-space-med {
+        padding-top: 25px !important;
+    }
+
+    .life-lungs {
+        padding-top:5px !important;
+    }
+    .neonatal-top {
+        padding-top: 70px !important;
+    }
+    .apply-immed-img {
+        width: calc(140px - 25%);
+        height: calc(140px - 25%);
+    }
+
+    .elderly-img-2 {
+        width: calc(125px - 50%);
+        height: calc(125px - 50%);
+    }
+
+    .second-arrow {
+        padding-right: 10px !important;
+    }
+
+    .resp-depression-img-left {
+        float: left;
+        width: 25%;
+        text-align: left;
+        padding:  15px 15px 95px 5px;
+        height: 100px;
+        vertical-align: middle;
+    }
+    .resp-depression-img-right {
+        float: right;
+        width: 74%;
+        padding: 15px 0 0 25px !important;
+    }
+
+    .black-box-section-break {
+        padding-top: 0.5em !important;
+    }
+
+    .back-patch-padding {
+        padding-top: 4em;
+    }
+
+}
+
