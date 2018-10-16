@@ -1,0 +1,75 @@
+
+/*
+
+generated from bootstrap studio
+*/
+.navbar.navbar-dark.navbar-expand-md.fixed-top.bg-dark {
+  background-color:#000 !important;
+  opacity:0.9;
+  border-bottom:2px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color:#fff;
+  font-size:13px;
+}
+
+.navbar-dark .navbar-nav .nav-link .search-icon {
+  color:#fff;
+  font-size:23px;
+  line-height:0;
+}
+
+body {
+  padding-top:60px;
+}
+
+.header {
+  padding-top:35px;
+  padding-left:35px;
+}
+
+.header h2 {
+  font-size:25px;
+  padding-bottom:20px;
+  font-weight:600;
+  padding-right:15px;
+}
+
+.header p {
+  font-size:35px;
+  font-weight:400;
+}
+
+.container p {
+  font-size:22px;
+  padding-top:15px;
+  padding-bottom:10px;
+}
+
+.container {
+  width:80%;
+}
+
+#accordion-1 {
+  border:0px !important;
+}
+
+.card-header:first-child {
+  background-color:blue;
+}
+
+.accordian-button {
+  color:#ffffff;
+}
+a{
+    color: white;
+}
+a:hover{
+    
+    color: azure;
+}
+.card .first-card {
+  border:0;
+}
+
