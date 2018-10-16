@@ -149,9 +149,6 @@ nav {
         margin-right: -10px;
         border: none;
         color: $hotpink;
-        &:focus, &:hover {
-          background-color: $white !important;
-        }
         @media (max-width: 768px) {
           display: unset;
         }
