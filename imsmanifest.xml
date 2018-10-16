@@ -59,8 +59,8 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="__5fCSS5X5V0P_course_id_RES" type="webcontent" href="lms_launch.html" adlcp:scormtype="sco">
-      <file href="lms_launch.html" />
+    <resource identifier="__5fCSS5X5V0P_course_id_RES" type="webcontent" href="start.html" adlcp:scormtype="sco">
+      <file href="start.html" />
     </resource>
   </resources>
 </manifest>
