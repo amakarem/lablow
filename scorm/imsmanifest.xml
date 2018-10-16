@@ -6,7 +6,7 @@
     <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
       <general>
         <title>
-          <langstring xml:lang="x-none">BuTrans Product Monograph (PM) Training Module</langstring>
+          <langstring xml:lang="x-none">Loblaw Training Module</langstring>
         </title>
       </general>
       <lifecycle>
@@ -52,9 +52,9 @@
   </metadata>
   <organizations default="Prototype_ORG">
     <organization identifier="Prototype_ORG">
-      <title>BuTrans Product Monograph (PM) Training Module</title>
+      <title>Loblaw Training Module</title>
       <item identifier="Prototype_SCO" isvisible="true" identifierref="__5fCSS5X5V0P_course_id_RES">
-        <title>BuTrans Product Monograph (PM) Training Module</title>
+        <title>Loblaw Training Module</title>
       </item>
     </organization>
   </organizations>
